@@ -1,0 +1,30 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary Files
+*.tmp
+*.log
+
+# Node modules (if you add any build tools later)
+node_modules/
+package-lock.json
+
+# Environment files
+.env
+.env.local
+
+# Build outputs (if you add build tools later)
+dist/
+build/
+
+# Preview/test files (optional - remove if you want to include preview.html)
+preview.html
