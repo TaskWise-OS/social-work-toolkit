@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Australian Social Work Practice Toolkit | Evidence-Based Resources</title>
+    <meta name="description" content="Evidence-informed tools and frameworks for Australian social work practice. Find the right resources aligned with Australian legislation and best-practice standards.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h1>Social Work Toolkit</h1>
+                </div>
+                <p class="tagline">Evidence-informed practice resources for Australian social workers</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Introduction Section -->
+            <section class="intro-section">
+                <div class="intro-card">
+                    <h2>Find the Right Tools for Your Practice</h2>
+                    <p>Get personalized recommendations for evidence-based tools, frameworks, and templates aligned with Australian legislation, state/territory requirements, and best-practice standards.</p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <div class="feature-text">Trauma-informed guidance</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📋</div>
+                            <div class="feature-text">Australian compliance</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✨</div>
+                            <div class="feature-text">Best-practice standards</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Input Section -->
+            <section class="input-section" id="inputSection">
+                <div class="section-header">
+                    <h2>Describe Your Practice Need</h2>
+                    <p>Tell us about your current situation, client needs, or the type of support you're seeking</p>
+                </div>
+
+                <div class="input-card">
+                    <div class="input-group">
+                        <label for="practiceQuery">What are you working on?</label>
+                        <textarea 
+                            id="practiceQuery" 
+                            placeholder="E.g., I'm working with a family experiencing domestic violence and need assessment tools that are trauma-informed..."
+                            rows="4"
+                        ></textarea>
+                        <div class="input-hint">Be as specific as you'd like – we'll find the most relevant resources</div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Practice Area (Optional)</label>
+                        <div class="tag-group">
+                            <button class="tag-btn" data-area="child-protection">Child Protection</button>
+                            <button class="tag-btn" data-area="mental-health">Mental Health</button>
+                            <button class="tag-btn" data-area="family-services">Family Services</button>
+                            <button class="tag-btn" data-area="disability">Disability Support</button>
+                            <button class="tag-btn" data-area="aged-care">Aged Care</button>
+                            <button class="tag-btn" data-area="youth">Youth Services</button>
+                            <button class="tag-btn" data-area="domestic-violence">Domestic Violence</button>
+                            <button class="tag-btn" data-area="substance-use">Substance Use</button>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>State/Territory (Optional)</label>
+                        <select id="stateSelect">
+                            <option value="">All states and territories</option>
+                            <option value="nsw">New South Wales</option>
+                            <option value="vic">Victoria</option>
+                            <option value="qld">Queensland</option>
+                            <option value="wa">Western Australia</option>
+                            <option value="sa">South Australia</option>
+                            <option value="tas">Tasmania</option>
+                            <option value="act">Australian Capital Territory</option>
+                            <option value="nt">Northern Territory</option>
+                        </select>
+                    </div>
+
+                    <button class="primary-btn" id="findToolsBtn">
+                        <span class="btn-text">Find Recommended Tools</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <section class="loading-section hidden" id="loadingSection">
+                <div class="loading-card">
+                    <div class="loading-spinner"></div>
+                    <h3>Analyzing your request...</h3>
+                    <p>Searching our evidence-based toolkit for the most relevant resources</p>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section hidden" id="resultsSection">
+                <div class="section-header">
+                    <h2>Recommended Resources</h2>
+                    <p id="resultsSubtitle">Based on your practice needs</p>
+                </div>
+
+                <!-- AI Insights -->
+                <div class="insights-card" id="insightsCard">
+                    <div class="insights-header">
+                        <div class="insights-icon">💡</div>
+                        <h3>Practice Guidance</h3>
+                    </div>
+                    <div class="insights-content" id="insightsContent">
+                        <!-- AI-generated insights will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Recommended Tools -->
+                <div class="tools-grid" id="toolsGrid">
+                    <!-- Tool cards will be dynamically inserted here -->
+                </div>
+
+                <!-- Additional Resources -->
+                <div class="additional-resources" id="additionalResources">
+                    <h3>Additional Considerations</h3>
+                    <div class="resources-content" id="resourcesContent">
+                        <!-- Additional guidance will be inserted here -->
+                    </div>
+                </div>
+
+                <button class="secondary-btn" id="newSearchBtn">
+                    <span class="btn-icon">←</span>
+                    <span class="btn-text">Start New Search</span>
+                </button>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>This toolkit provides evidence-informed guidance for professional social workers in Australia. Always consult relevant legislation, organizational policies, and professional supervision when making practice decisions.</p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
